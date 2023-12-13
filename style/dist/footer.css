@@ -1,0 +1,43 @@
+footer {
+  background-color: #445069;
+  padding: 36px;
+  color: #fff;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
+}
+footer .wrapper .ikons {
+  display: flex;
+  gap: 36px;
+}
+footer .wrapper .ikons img {
+  cursor: pointer;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+footer #kontakty {
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  width: 85px;
+  padding: 5px 0;
+  margin: auto;
+}
+footer #ot_doba {
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  width: 140px;
+  padding: 5px 0;
+  margin: auto;
+}
+footer .info .hezci {
+  display: flex;
+  justify-content: space-between;
+}
