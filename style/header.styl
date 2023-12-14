@@ -2,30 +2,94 @@ body
     margin 0
     font-family Arial, Helvetica, sans-serif
 
-header
+.Header
     margin 0
     background-color #252B48
-    padding 16px
-    display flex
-    color white
-    justify-content space-between
-    align-items center
-
-    .logo
-        margin 0
-
-        img
-            width 75px
     
-    .Hamburger
+    &-wrapper
         display flex
-        flex-direction column
-        cursor pointer
+        color white
+        justify-content space-between
+        align-items center
+        position relative
+        width: 100%
+        max-width: 1300px
+        z-index 2
+        background-color #252B48
 
-        .stick
-            border: 1px solid white
-            margin 4px
-            width 30px
+        .logo
+            margin 0
+            padding: 16px
+
+            img
+                width 75px
+        
+        .Hamburger
+            display flex
+            flex-direction column
+            cursor pointer
+            padding: 16px
+
+            .stick
+                border: 1px solid white
+                margin 4px
+                width 30px
+                opacity 1
+                transition ease transform .6s, ease opacity 1s
+
+        .is-open
+            
+            .stick:nth-child(1)
+                transform: rotate(-45deg) translate(0px, 7px)
+
+            .stick:nth-child(2)
+                display: none
+
+            .stick:nth-child(3)
+                transform: rotate(45deg) translate(0px, -7px)
+
+        
+    &-nav
+        position: absolute
+        width 100%
+        background-color: #252B48
+        margin: 0
+        height: 120px
+        left 0
+        top 0
+        display: flex
+        justify-content: center
+        z-index 1
+        transform translateY(-100%)
+        transition transform .6s ease
+
+    
+        ul
+            margin 0
+            display flex
+            justify-content: center
+            gap 20px
+            flex-direction: column
+            height: 100%
+            padding: 0
+                
+
+            li
+                display flex
+                justify-content: center
+
+                a
+                    color white
+                    text-decoration none
+                    font-weight bold
+                    transition: 1s ease
+
+                    &:hover
+                        color #F7E987
+
+    .is-active
+        transform translateY(90%)
+
 
 
     
